@@ -6,6 +6,7 @@ import styles from './header.module.scss'
 import searchIcon from 'images/search.png'
 import Image from 'next/image';
 import Link from 'next/link';
+import { describe } from 'node:test'
 
 export const Header = () => {
     const [value, setValue] = useState<string>('')
@@ -21,11 +22,13 @@ export const Header = () => {
     }
 
     useEffect(() => {
-        if (!isLoading && data) {
-            router.push(`/beerInfo/${data[0].id}`)
+        if(data?.length===0){
+            router.push(`/404`)
+        }
+        else if (!isLoading && data) {
+            router.push(`/beerInfo/${data[0]?.id}`)
         }
     }, [isLoading, data])
-
     return (
         <header>
             <div className={styles.search}>
@@ -35,7 +38,7 @@ export const Header = () => {
                         onChange={handlerChange}
                         placeholder="search by beer name..."
                         value={value}
-                    />
+                    /> 
                     <button type="submit"><Image src={searchIcon}/></button>
                 </form>
                 <Link href={'/'}><h2>Beers-Bar</h2></Link>

@@ -17,7 +17,7 @@ const BeerInfo: NextPage = () => {
                 <div className={styles.beerImg}>
                     <Image
                         src={data[0].image_url || noBeer}
-                        width={90}
+                        width={75}
                         height={200}
                         layout={'fixed'}
                     />

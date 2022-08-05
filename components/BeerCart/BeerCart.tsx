@@ -13,7 +13,7 @@ export const BeerCart: FC<IBeer> = (props) => {
         <Link href={`/beerInfo/${encodeURIComponent(id)}`}>
             <a className={styles.beerCart}>
                 <div className={styles.img}>
-                    <Image src={image_url || noBeer} width={90} height={200} layout={'fixed'}/>
+                    <Image src={image_url || noBeer} width={75} height={200} layout={'fixed'}/>
                 </div>
                 <h3 className={styles.nameBeer}>{name}</h3>
                 <p className={styles.infoBeer}>{lengthDes140(description)}</p>
