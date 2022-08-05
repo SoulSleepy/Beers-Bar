@@ -1,0 +1,17 @@
+.paginator {
+    width: 550px;
+    margin: 2px auto 10px auto;
+}
+.paginator button {
+    margin: 1px;
+    background: rgb(255, 250, 245);
+    border: none;
+    box-shadow: 2px 2px 2px #8E8D8A;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    color: #353535;
+}
+.paginator .activePage {
+    background-color: #D8C3A5;
+}

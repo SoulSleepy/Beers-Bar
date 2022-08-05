@@ -1,0 +1,17 @@
+.beerContainer {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 120px auto;
+    grid-template-areas: 'img inf';
+    color: #353535;
+}
+.beerImg {
+    margin: 25px 0 5px 10px;
+    grid-area: img;
+}
+.beerInfo {
+    grid-area: inf;
+}
+.beerInfo h3 {
+    text-align: center;
+}
